@@ -36,6 +36,7 @@ public class XmlDataService : IXmlData
         if (File.Exists(path))
         {
             //file already exists, load documnet
+            //when loading content , we check to see if the member is in the list of members.
         }
         else
         {
