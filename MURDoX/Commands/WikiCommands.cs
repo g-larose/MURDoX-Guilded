@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -7,13 +8,18 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Genbox.Wikipedia;
+using Guilded.Base;
+using Guilded.Base.Embeds;
 using Guilded.Commands;
+using Guilded.Permissions;
+using MURDoX.Services;
 using MURDoX.Utils;
 
 namespace MURDoX.Commands
 {
     public class WikiCommands : CommandModule
     {
+        private GuildedDataService gds = new();
         [Command(Aliases = new string[] { "wiki", "search" })]
         [Description("search the wiki web site")]
         public async Task SearchWiki(CommandEvent invokator, string[] query)
@@ -21,21 +27,32 @@ namespace MURDoX.Commands
             var newQuery = string.Join(" ", query);
           string apiUrl = $"https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch={newQuery}&utf8=1&prop=extracts&exintro=1";
             using var httpClient = new HttpClient();
-
+            var embed = new Embed();
+            
             try
             {
                 HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
                 {
+                    embed.SetTitle($"Wiki Search: `{newQuery}`");
+                    embed.SetColor(EmbedColors.GetColor("gray", Color.Gray));
                     string jsonResult = await response.Content.ReadAsStringAsync();
                     var result = JsonSerializer.Deserialize<WikipediaSearchResult>(jsonResult);
-                    foreach (var item in result!.Query.Search)
-                    {
-                        var title = item.Title;
-                        var snippet = item.Snippet.Sanitize();
-                        var test = "";
-                    }
+                    var rnd = new Random();
+                    var index = rnd.Next(1, result!.Query.Search.Length);
+
+                    var title = result.Query.Search[index].Title;
+                    var snippet = result.Query.Search[index].Snippet.SanitizeTags();
+                    embed.AddField("Title", title, true);
+                    embed.AddField("Summary", $"{snippet}...", true);
+
+                    var test = "";
+
+
+                    embed.SetFooter("MURDoX watching everything");
+                    embed.SetTimestamp(DateTime.Now);
+                    await invokator.ReplyAsync(null, false, false, embed);
                 }
             }
             catch (Exception e)

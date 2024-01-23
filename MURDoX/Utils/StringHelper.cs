@@ -9,7 +9,7 @@ namespace MURDoX.Utils
 {
     public static class StringHelper
     {
-        public static string Sanitize(this string input)
+        public static string SanitizeTags(this string input)
         {
             string pattern = "<.*?>";
             string result = Regex.Replace(input, pattern, string.Empty);

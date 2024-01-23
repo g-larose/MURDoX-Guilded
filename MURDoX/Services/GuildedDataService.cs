@@ -95,6 +95,30 @@ namespace MURDoX.Services
             return servers;
         }
 
+        public async Task<string[]> GetServerMemberPermissions(HashId serverId, HashId memberId)
+        {
+            using var httpClient = new HttpClient();
+            var token = GetBotToken();
+            httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+            httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+            var permissions = Array.Empty<string>();
+            try
+            {
+
+                    string perms = await httpClient.GetStringAsync(
+                                            new Uri($"https://www.guilded.gg/api/v1/servers/{serverId}/members/{memberId}/permissions"));
+                    var test = "";
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return permissions;
+        }
+
         public string GetBotToken()
         {
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");

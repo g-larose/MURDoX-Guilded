@@ -18,7 +18,7 @@ namespace MURDoX
         private static string? token = JsonSerializer.Deserialize<ConfigJson>(json!).Token!;
         private static string? prefix = JsonSerializer.Deserialize<ConfigJson>(json!).Prefix!;
         private const string LogChannelId = "261dc3c2-8db4-44e0-8af1-a9dc50a0d90c";
-        private GuildedMessageService messageService = new();
+
         public async Task RunAsync()
         {
             await using var client = new GuildedBotClient(token!)
@@ -104,7 +104,6 @@ namespace MURDoX
             BotTimerService bts = new BotTimerService();
             Console.WriteLine($"{DarkGray($"[{timeStamp}]")} {DarkYellow("[INFO]")}    {DarkGray($"[{client.Me.Name}]")}  {DarkYellow("loading command modules")}");
             Console.WriteLine($"{DarkGray($"[{timeStamp}]")} {DarkYellow("[INFO]")}    {DarkGray($"[{client.Me.Name}] ")} {DarkYellow("timer service started")}");
-            
             await Task.Delay(-1);
         }
 

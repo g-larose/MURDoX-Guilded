@@ -16,6 +16,7 @@ namespace MURDoX.Interfaces
         Task<string> GetMemberXp(string serverId, string memberId);
         Task<string> GetMemberRolesAsync(HashId serverId, HashId userId);
         Task<string> GetUserServersAsync(string userId);
+        Task<string[]> GetServerMemberPermissions(HashId serverId, HashId memberId);
         public string GetBotToken();
     }
 }
