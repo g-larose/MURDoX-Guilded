@@ -51,29 +51,33 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
+            "Genbox.Wikipedia": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Guilded": {
               "target": "Package",
-              "version": "[1.6.0, )"
+              "version": "[1.7.1, )"
             },
             "Guilded.Base": {
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[1.7.0, )"
             },
             "Guilded.Commands": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.7.1, )"
             },
             "Guilded.Connection": {
               "target": "Package",
-              "version": "[1.1.3, )"
+              "version": "[1.7.0, )"
             },
             "Guilded.Markdown": {
               "target": "Package",
-              "version": "[1.6.0, )"
+              "version": "[1.7.1, )"
             },
             "Guilded.Webhook": {
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[1.7.0, )"
             },
             "Humanizer.Core": {
               "target": "Package",
@@ -96,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

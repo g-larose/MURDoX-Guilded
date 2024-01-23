@@ -14,6 +14,7 @@ public class SupportCommands : CommandModule
         var supportChannelId = new Guid("479011d1-5631-46ac-b5c4-a5269c186daa");
         var author = await invokator.ParentClient.GetMemberAsync((HashId)invokator.ServerId!, invokator.CreatedBy);
         var id = Guid.NewGuid();
+        
         //var channel = await invokator.ParentClient.GetChannelAsync(supportChannelId);
         var embed = new Embed()
         {
@@ -28,5 +29,12 @@ public class SupportCommands : CommandModule
         
         //TODO: we need to create the xml for the support tickets.
 
+    }
+
+    [Command("suggest")]
+    [Description("adds a suggestion for the server modes to consider.")]
+    public async Task Suggest(CommandEvent invokator, string suggestion)
+    {
+        
     }
 }

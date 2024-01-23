@@ -30,3 +30,8 @@ D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Guilded.Commands.dll
 D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Data\Xml\player_data.xml
 D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\ChalkDotNET.dll
 D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Humanizer.dll
+D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Data\Xml\support_tickets.xml
+D:\GUILDED\BOTS\MURDoX\MURDoX\obj\Debug\net8.0\MURDoX.sourcelink.json
+D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Games\8Ball\8ball_reply.json
+D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Games\8Ball\eight_ball_response.txt
+D:\GUILDED\BOTS\MURDoX\MURDoX\bin\Debug\net8.0\Genbox.Wikipedia.dll

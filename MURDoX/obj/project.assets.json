@@ -11,23 +11,39 @@
           "lib/netstandard2.1/ChalkDotNET.dll": {}
         }
       },
-      "Guilded/1.6.0": {
+      "Genbox.Wikipedia/4.0.0": {
         "type": "package",
         "dependencies": {
-          "Guilded.Connection": "1.1.3"
+          "System.Text.Json": "6.0.1"
         },
         "compile": {
-          "lib/net6.0/Guilded.dll": {
+          "lib/netstandard2.0/Genbox.Wikipedia.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.dll": {
+          "lib/netstandard2.0/Genbox.Wikipedia.dll": {
             "related": ".xml"
           }
         }
       },
-      "Guilded.Base/1.1.0": {
+      "Guilded/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "Guilded.Connection": "1.7.0"
+        },
+        "compile": {
+          "lib/net8.0/Guilded.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Guilded.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Guilded.Base/1.7.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -37,77 +53,77 @@
           "System.Reactive.Linq": "5.0.0"
         },
         "compile": {
-          "lib/net6.0/Guilded.Base.dll": {
+          "lib/net8.0/Guilded.Base.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.Base.dll": {
+          "lib/net8.0/Guilded.Base.dll": {
             "related": ".xml"
           }
         }
       },
-      "Guilded.Commands/1.5.1": {
+      "Guilded.Commands/1.7.1": {
         "type": "package",
         "dependencies": {
-          "Guilded": "1.5.1"
+          "Guilded": "1.7.1"
         },
         "compile": {
-          "lib/net6.0/Guilded.Commands.dll": {
+          "lib/net8.0/Guilded.Commands.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.Commands.dll": {
+          "lib/net8.0/Guilded.Commands.dll": {
             "related": ".xml"
           }
         }
       },
-      "Guilded.Connection/1.1.3": {
+      "Guilded.Connection/1.7.0": {
         "type": "package",
         "dependencies": {
-          "Guilded.Base": "1.1.0",
+          "Guilded.Base": "1.7.0",
           "Websocket.Client": "4.4.43"
         },
         "compile": {
-          "lib/net6.0/Guilded.Connection.dll": {
+          "lib/net8.0/Guilded.Connection.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.Connection.dll": {
+          "lib/net8.0/Guilded.Connection.dll": {
             "related": ".xml"
           }
         }
       },
-      "Guilded.Markdown/1.6.0": {
+      "Guilded.Markdown/1.7.1": {
         "type": "package",
         "dependencies": {
-          "Guilded": "1.6.0"
+          "Guilded": "1.7.1"
         },
         "compile": {
-          "lib/net6.0/Guilded.Markdown.dll": {
+          "lib/net8.0/Guilded.Markdown.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.Markdown.dll": {
+          "lib/net8.0/Guilded.Markdown.dll": {
             "related": ".xml"
           }
         }
       },
-      "Guilded.Webhook/1.1.0": {
+      "Guilded.Webhook/1.7.0": {
         "type": "package",
         "dependencies": {
-          "Guilded.Base": "1.1.0"
+          "Guilded.Base": "1.7.0"
         },
         "compile": {
-          "lib/net6.0/Guilded.Webhook.dll": {
+          "lib/net8.0/Guilded.Webhook.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Guilded.Webhook.dll": {
+          "lib/net8.0/Guilded.Webhook.dll": {
             "related": ".xml"
           }
         }
@@ -201,6 +217,67 @@
           }
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll": {
+            "assetType": "runtime",
+            "rid": "browser"
+          }
+        }
+      },
+      "System.Text.Json/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.Threading.Channels/4.7.0": {
         "type": "package",
         "compile": {
@@ -257,106 +334,143 @@
         "lib/netstandard2.1/ChalkDotNET.dll"
       ]
     },
-    "Guilded/1.6.0": {
-      "sha512": "SKDfQq4sto34C3JsO8R8IJwS0AHOaKN4+B6Ox2ALovXoKOyOepAcGvBAzki72dW4vYNfZ5VEgSuUovszUWw6FQ==",
+    "Genbox.Wikipedia/4.0.0": {
+      "sha512": "dOinyKtI3wSTJ+yLKQdExbpmTuF2oMkX/ThSzTxb/2KhYQynwf8wn/7hm2e8Om4NXLgNcGHa3Qrqr2ZFkm/qKQ==",
       "type": "package",
-      "path": "guilded/1.6.0",
+      "path": "genbox.wikipedia/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "genbox.wikipedia.4.0.0.nupkg.sha512",
+        "genbox.wikipedia.nuspec",
+        "lib/netstandard2.0/Genbox.Wikipedia.dll",
+        "lib/netstandard2.0/Genbox.Wikipedia.xml"
+      ]
+    },
+    "Guilded/1.7.1": {
+      "sha512": "T33cx5zZghlPLQB4FbTGcvqtSQbqEcYT5mVJtl28Yjk2tFf1+YF6l2GgJ8+Tg/khEIxhGqFTgnEyrrJnJJBsvg==",
+      "type": "package",
+      "path": "guilded/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.1.6.0.nupkg.sha512",
+        "guilded.1.7.1.nupkg.sha512",
         "guilded.nuspec",
         "lib/net5.0/Guilded.dll",
         "lib/net5.0/Guilded.xml",
         "lib/net6.0/Guilded.dll",
-        "lib/net6.0/Guilded.xml"
+        "lib/net6.0/Guilded.xml",
+        "lib/net7.0/Guilded.dll",
+        "lib/net7.0/Guilded.xml",
+        "lib/net8.0/Guilded.dll",
+        "lib/net8.0/Guilded.xml"
       ]
     },
-    "Guilded.Base/1.1.0": {
-      "sha512": "cUsqwakEYe7ZSrRmmxVAu1NHMU2dOg2/IK+D4flu4SW9l2Sqab16ucRdnJ0fE5EqcxXswJ6iV70cKPwTLl506g==",
+    "Guilded.Base/1.7.0": {
+      "sha512": "Lj9ZxYCOTw9QXkxUMflQahPgS2okgA9yynp4SBFvepu0D1GvdAnbrUsETidmOIPOGFCpIEPvWkpumKe+rhQIeg==",
       "type": "package",
-      "path": "guilded.base/1.1.0",
+      "path": "guilded.base/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.base.1.1.0.nupkg.sha512",
+        "guilded.base.1.7.0.nupkg.sha512",
         "guilded.base.nuspec",
         "lib/net5.0/Guilded.Base.dll",
         "lib/net5.0/Guilded.Base.xml",
         "lib/net6.0/Guilded.Base.dll",
-        "lib/net6.0/Guilded.Base.xml"
+        "lib/net6.0/Guilded.Base.xml",
+        "lib/net7.0/Guilded.Base.dll",
+        "lib/net7.0/Guilded.Base.xml",
+        "lib/net8.0/Guilded.Base.dll",
+        "lib/net8.0/Guilded.Base.xml"
       ]
     },
-    "Guilded.Commands/1.5.1": {
-      "sha512": "39pj/koFaYqHWrvePSzMvhUxy9f+95Q+WJ1xqB5wqV/bOHl4feWCVAROyZollPv4YcsPFXNdXlIUX05eJ/TtgQ==",
+    "Guilded.Commands/1.7.1": {
+      "sha512": "OVtxZfT9azT/xyUkvbFuvGaqzqkcl3puhh2Qcm/X5CqKy5z/h15uS4zKrqvRDR/Le+MCWivhkC6CZA/K7O2rFQ==",
       "type": "package",
-      "path": "guilded.commands/1.5.1",
+      "path": "guilded.commands/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.commands.1.5.1.nupkg.sha512",
+        "guilded.commands.1.7.1.nupkg.sha512",
         "guilded.commands.nuspec",
         "lib/net5.0/Guilded.Commands.dll",
         "lib/net5.0/Guilded.Commands.xml",
         "lib/net6.0/Guilded.Commands.dll",
-        "lib/net6.0/Guilded.Commands.xml"
+        "lib/net6.0/Guilded.Commands.xml",
+        "lib/net7.0/Guilded.Commands.dll",
+        "lib/net7.0/Guilded.Commands.xml",
+        "lib/net8.0/Guilded.Commands.dll",
+        "lib/net8.0/Guilded.Commands.xml"
       ]
     },
-    "Guilded.Connection/1.1.3": {
-      "sha512": "bDO7BzCe3zByd0JCAcEaokxQ27D09DS4e0QO0Knpv8hI+Sm5v3JzT02xxuRYt1qAyy6/HW5wY2xreJJqyxE0eQ==",
+    "Guilded.Connection/1.7.0": {
+      "sha512": "Q5SSR1vIft0NnbdcPygYJ5ixQslC3Cy0RPJ0zaDIgosTMR7z/vWP5HJzgliJiXxH3PDvSFA6BI9PbRc7sfGo9Q==",
       "type": "package",
-      "path": "guilded.connection/1.1.3",
+      "path": "guilded.connection/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.connection.1.1.3.nupkg.sha512",
+        "guilded.connection.1.7.0.nupkg.sha512",
         "guilded.connection.nuspec",
         "lib/net5.0/Guilded.Connection.dll",
         "lib/net5.0/Guilded.Connection.xml",
         "lib/net6.0/Guilded.Connection.dll",
-        "lib/net6.0/Guilded.Connection.xml"
+        "lib/net6.0/Guilded.Connection.xml",
+        "lib/net7.0/Guilded.Connection.dll",
+        "lib/net7.0/Guilded.Connection.xml",
+        "lib/net8.0/Guilded.Connection.dll",
+        "lib/net8.0/Guilded.Connection.xml"
       ]
     },
-    "Guilded.Markdown/1.6.0": {
-      "sha512": "BkBphxpctZz9kAd/ALT6EPz8nJvOvZIFYIoFQXcLDfnpm//a5jGG0eFnC1e71Dr5KY0nMKcTxsYRGrAGtgM36A==",
+    "Guilded.Markdown/1.7.1": {
+      "sha512": "9Ao8NXtj5jKadCRnUULxSvm9cfOgR42zDUkO/IAraKxPFXUCAIQXp12g/98t1gVsIXqqi6ZbUKJklBZVFvAyOQ==",
       "type": "package",
-      "path": "guilded.markdown/1.6.0",
+      "path": "guilded.markdown/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.markdown.1.6.0.nupkg.sha512",
+        "guilded.markdown.1.7.1.nupkg.sha512",
         "guilded.markdown.nuspec",
         "lib/net5.0/Guilded.Markdown.dll",
         "lib/net5.0/Guilded.Markdown.xml",
         "lib/net6.0/Guilded.Markdown.dll",
-        "lib/net6.0/Guilded.Markdown.xml"
+        "lib/net6.0/Guilded.Markdown.xml",
+        "lib/net7.0/Guilded.Markdown.dll",
+        "lib/net7.0/Guilded.Markdown.xml",
+        "lib/net8.0/Guilded.Markdown.dll",
+        "lib/net8.0/Guilded.Markdown.xml"
       ]
     },
-    "Guilded.Webhook/1.1.0": {
-      "sha512": "T0wXhtQ//yuwDbQvvv7BpkAyPxdHEGxmmwAR7lEpuXzvKUDz/YL51ESv5EgpkHdFznTPEkmtzB778+IQlTinWw==",
+    "Guilded.Webhook/1.7.0": {
+      "sha512": "XGlX9pMTQtzuB7bpnprruKw0Il7cS9XIZMRm+kygO0DOkaBVMG+GeBhtyTFVDkSUrsqnBB4h9ZDFRpBUTAaXDg==",
       "type": "package",
-      "path": "guilded.webhook/1.1.0",
+      "path": "guilded.webhook/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "README.md",
-        "guilded.webhook.1.1.0.nupkg.sha512",
+        "guilded.webhook.1.7.0.nupkg.sha512",
         "guilded.webhook.nuspec",
         "lib/net5.0/Guilded.Webhook.dll",
         "lib/net5.0/Guilded.Webhook.xml",
         "lib/net6.0/Guilded.Webhook.dll",
-        "lib/net6.0/Guilded.Webhook.xml"
+        "lib/net6.0/Guilded.Webhook.xml",
+        "lib/net7.0/Guilded.Webhook.dll",
+        "lib/net7.0/Guilded.Webhook.xml",
+        "lib/net8.0/Guilded.Webhook.dll",
+        "lib/net8.0/Guilded.Webhook.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -487,6 +601,112 @@
         "system.reactive.linq.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "sha512": "Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "type": "package",
+      "path": "system.text.encodings.web/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Text.Encodings.Web.dll",
+        "lib/net461/System.Text.Encodings.Web.xml",
+        "lib/net6.0/System.Text.Encodings.Web.dll",
+        "lib/net6.0/System.Text.Encodings.Web.xml",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.dll",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.6.0.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Json/6.0.1": {
+      "sha512": "X3cTdM+jna1YyfTUzToW7aVgINFv7R1W4+1+3hua/YCyLjApPoR8fd+2Cep9DbfYjbv+rBx4K6dlmAWEJr9AHg==",
+      "type": "package",
+      "path": "system.text.json/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "build/System.Text.Json.targets",
+        "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/net6.0/System.Text.Json.dll",
+        "lib/net6.0/System.Text.Json.xml",
+        "lib/netcoreapp3.1/System.Text.Json.dll",
+        "lib/netcoreapp3.1/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.6.0.1.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Threading.Channels/4.7.0": {
       "sha512": "gdOOXBhtt2UpTxYJm1DRmoqNfYg5ypvhzhVt0vxKhzxXFjS81r8yIOSFsJYLRa1Jc14GBAqCnjxJstO3zBN7gg==",
       "type": "package",
@@ -569,12 +789,13 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "ChalkDotNET >= 1.0.0",
-      "Guilded >= 1.6.0",
-      "Guilded.Base >= 1.1.0",
-      "Guilded.Commands >= 1.5.1",
-      "Guilded.Connection >= 1.1.3",
-      "Guilded.Markdown >= 1.6.0",
-      "Guilded.Webhook >= 1.1.0",
+      "Genbox.Wikipedia >= 4.0.0",
+      "Guilded >= 1.7.1",
+      "Guilded.Base >= 1.7.0",
+      "Guilded.Commands >= 1.7.1",
+      "Guilded.Connection >= 1.7.0",
+      "Guilded.Markdown >= 1.7.1",
+      "Guilded.Webhook >= 1.7.0",
       "Humanizer.Core >= 2.14.1"
     ]
   },
@@ -630,29 +851,33 @@
             "target": "Package",
             "version": "[1.0.0, )"
           },
+          "Genbox.Wikipedia": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Guilded": {
             "target": "Package",
-            "version": "[1.6.0, )"
+            "version": "[1.7.1, )"
           },
           "Guilded.Base": {
             "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[1.7.0, )"
           },
           "Guilded.Commands": {
             "target": "Package",
-            "version": "[1.5.1, )"
+            "version": "[1.7.1, )"
           },
           "Guilded.Connection": {
             "target": "Package",
-            "version": "[1.1.3, )"
+            "version": "[1.7.0, )"
           },
           "Guilded.Markdown": {
             "target": "Package",
-            "version": "[1.6.0, )"
+            "version": "[1.7.1, )"
           },
           "Guilded.Webhook": {
             "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[1.7.0, )"
           },
           "Humanizer.Core": {
             "target": "Package",
@@ -675,7 +900,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

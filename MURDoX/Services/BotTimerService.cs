@@ -21,7 +21,7 @@ namespace MURDoX.Services
         {
             _timer.Start();
             StartDate = DateTime.Now.ToShortDateString();
-            StartTime = DateTime.Now.ToShortTimeString();
+            StartTime = DateTime.Now.ToString("hh:mm tt");
         }
         public static string GetBotUptime()
         {
@@ -50,12 +50,12 @@ namespace MURDoX.Services
             return uptime1;
         }
 
-        public string GetStartDate()
+        public static string GetStartDate()
         {
             return StartDate!;
         }
 
-        public string GetStartTime()
+        public static string GetStartTime()
         {
             return StartTime!;
         }

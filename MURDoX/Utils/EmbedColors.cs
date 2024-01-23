@@ -20,6 +20,7 @@ namespace MURDoX.Utils
         {
             { "teal", Color.Teal }, { "red", Color.Red}, { "blue", Color.Blue },
             { "black", Color.Black }, { "yellow", Color.Yellow}, { "green", Color.Green },
+            { "gray", Color.DarkGray }, {"purple", Color.Purple }, { "peach", Color.PeachPuff }
         };
 
         public static Color GetColor(string colorName, Color defaultColor)
