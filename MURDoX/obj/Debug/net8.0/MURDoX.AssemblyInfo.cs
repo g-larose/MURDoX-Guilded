@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MURDoX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bac3a57ba336fc7c78ca58ee757455412c707ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de8136acd8d103158534a53eb16a86b9a1486b08")]
 [assembly: System.Reflection.AssemblyProductAttribute("MURDoX")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MURDoX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

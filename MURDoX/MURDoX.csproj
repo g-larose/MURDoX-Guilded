@@ -23,10 +23,10 @@
     <None Update="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\Xml\player_data.xml">
+    <None Update="Data\Xml\support_tickets.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\Xml\support_tickets.xml">
+    <None Update="Data\Xml\user_data.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Games\8Ball\8ball_reply.json">

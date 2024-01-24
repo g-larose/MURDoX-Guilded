@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MURDoX.Games.Blackjack;
+﻿using Guilded.Base;
+using Guilded.Servers;
 
 namespace MURDoX.Interfaces
 {
     public interface IXmlData
     {
-        Task CreatePlayerAsync();
-        Task<Player> GetPlayerInfoAsync();
-        Task<List<Player>> GetAllPlayersAsync();
-        Task<Player> UpdatePlayerInfoAsync();
-        void DeletePlayer(int playerId);
-        Task<bool> CreateSupportTicketAsync(Guid id);
+        Task<bool> CreateMemberAsync(Member member);
+        Task<Member> GetMemberInfoAsync(HashId userId);
+        Task<List<Member>> GetAllMembersAsync();
+        Task<Member> UpdateMemberInfoAsync(HashId userId);
+        void DeleteMember(HashId userId);
+        Task<bool> CreateSupportTicketAsync(Guid id, HashId authorId);
+        Task<bool> AddMemberWarning(HashId userId, string reason);
     }
 }

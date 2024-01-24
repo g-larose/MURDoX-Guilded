@@ -244,24 +244,31 @@ namespace MURDoX.Commands
             {
                 var embed = new Embed();
                 embed.SetTitle(":BlobHelpSign: Help");
-                embed.SetDescription("-Member Commands-\r\n`ask - MURDoX responds with a random answer`\r\n" +
+                embed.SetDescription("-Member Commands-\r\n" +
+                                     "`ask - MURDoX responds with a random answer`\r\n" +
                                      "`profile - fetches the mentioned user profile`\r\n" +
                                      "`suggest - adds server suggestion`\r\n" +
                                      "`info - get server info`\r\n" +
-                                     "`uptime - how long MURDoX has been online`\r\n\r\n" +
+                                     "`uptime - how long MURDoX has been online`\r\n" +
+                                     "`wiki - returns search results for a given topic`\r\n" +
                                      "`rob - rob xp from the mentioned player`\r\n" +
-                                     "`work - earn xp to play in the casino`" +
+                                     "`work - earn xp to play in the casino`\r\n" +
+                                     "`deposit - deposit xp into members bank`\r\n\r\n" +
                                      "-Mod Commands-\r\n`purge -deletes channel messages`\r\n" +
                                      "`warn - warn a member`\r\n" +
                                      "`mute - mute a member`\r\n" +
                                      "`ban - ban a member`\r\n" +
                                      "`kick - kick member from server`\r\n" +
                                      "`promote - promote member role`\r\n" +
-                                     "`demote - demote member role`\r\n");
+                                     "`demote - demote member role`\r\n" +
+                                     "`removexp - removes set amount of xp from member`\r\n" +
+                                     "`addxp - add set amount of xp to member`");
                 embed.SetColor(EmbedColors.GetColor("gray", Color.DarkGray));
                 embed.SetTimestamp(DateTime.Now);
                 embed.SetFooter(new EmbedFooter("MURDoX watching everything..."));
-                await invokator.ReplyAsync(null, false, false, embed);
+                
+                var message = await invokator.ReplyAsync(null, false, false, embed);
+                
 
             }
             else

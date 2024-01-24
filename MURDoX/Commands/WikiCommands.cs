@@ -25,7 +25,7 @@ namespace MURDoX.Commands
         public async Task SearchWiki(CommandEvent invokator, string[] query)
         {
             var newQuery = string.Join(" ", query);
-          string apiUrl = $"https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch={newQuery}&utf8=1&prop=extracts&exintro=1";
+            string apiUrl = $"https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch={newQuery}&utf8=1&prop=extracts&exintro=2";
             using var httpClient = new HttpClient();
             var embed = new Embed();
             
@@ -40,19 +40,28 @@ namespace MURDoX.Commands
                     string jsonResult = await response.Content.ReadAsStringAsync();
                     var result = JsonSerializer.Deserialize<WikipediaSearchResult>(jsonResult);
                     var rnd = new Random();
-                    var index = rnd.Next(1, result!.Query.Search.Length);
 
-                    var title = result.Query.Search[index].Title;
-                    var snippet = result.Query.Search[index].Snippet.SanitizeTags();
-                    embed.AddField("Title", title, true);
-                    embed.AddField("Summary", $"{snippet}...", true);
+                    if (result.Query.Search.Length < 1)
+                    {
+                        await invokator.ReplyAsync($"no results found for query: `{newQuery}`");
+                    }
+                    else
+                    {
+                        var index = rnd.Next(1, result!.Query.Search.Length);
 
-                    var test = "";
+                        var title = result.Query.Search[index].Title;
+                        var snippet = result.Query.Search[index].Snippet.SanitizeTags();
+                        embed.SetDescription("Wiki Search is a work in progress.");
+                        embed.AddField("Title", title, true);
+                        embed.AddField("Summary", $"{snippet}...", true);
 
+                        var test = "";
 
-                    embed.SetFooter("MURDoX watching everything");
-                    embed.SetTimestamp(DateTime.Now);
-                    await invokator.ReplyAsync(null, false, false, embed);
+                        embed.SetFooter("MURDoX watching everything");
+                        embed.SetTimestamp(DateTime.Now);
+                        await invokator.ReplyAsync(null, false, false, embed);
+                    }
+                    
                 }
             }
             catch (Exception e)
